@@ -4,20 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
         // GET: Movies
-        public ActionResult Random()
+        public ActionResult Index()
         {
-            var movie = new Movie()
+            var movies = new List<Movie>()
             {
-                Name = "Shrek"
+                new Movie { Name = "Shrek"},
+                new Movie { Name = "Wall-e"}
             };
 
-            return View(movie);
+            return View(movies);
         }
     }
 }
