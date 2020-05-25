@@ -18,6 +18,9 @@ else
             <th>
                 Customer
             </th>
+            <th>
+                Membership Type
+            </th>
         </tr>
 
         @foreach (var customer in Model)
@@ -26,6 +29,7 @@ else
                 <td>
                     @Html.ActionLink(linkText: customer.Name, actionName: "Details", routeValues: new { id = customer.Id })
                 </td>
+                <td>@customer.MembershipType.Name</td>
             </tr>
         }
     </table>
