@@ -75,6 +75,7 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id, Name, ReleaseDate, NumberInStocks, GenreId")] Movie movie)
         {
             if (ModelState.IsValid)
