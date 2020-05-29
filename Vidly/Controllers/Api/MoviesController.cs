@@ -19,7 +19,7 @@ namespace Vidly.Controllers.Api
         // GET: api/Movies
         public IQueryable<Movie> GetMovies()
         {
-            return db.Movies;
+            return db.Movies.Include(m => m.Genre);
         }
 
         // GET: api/Movies/5
