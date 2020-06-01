@@ -24,6 +24,8 @@ namespace Vidly.Models
         [Range(minimum: 1, maximum: 20)]
         public int NumberInStocks { get; set; }
 
+        public byte NumberAvailable { get; set; }
+
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }
         public Genre Genre { get; set; }
